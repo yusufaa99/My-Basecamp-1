@@ -1,0 +1,6 @@
+<h1><%= @notification.title %></h1>
+<p><%= @notification.message %></p>
+<p><strong>Read Status:</strong> <%= @notification.read_status ? 'Read' : 'Unread' %></p>
+<p><strong>Created At:</strong> <%= @notification.created_at %></p>
+<%= link_to 'Back to Notifications List', notifications_path, class: 'btn btn-secondary btn-sm' %>
+

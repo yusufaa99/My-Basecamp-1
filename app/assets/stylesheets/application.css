@@ -1,0 +1,88 @@
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
+  }
+  
+  .admin-dashboard ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Makes the list items appear on the same line */
+  }
+  
+  .admin-dashboard li {
+    margin: 10px 20px; /* Adds space between list items */
+  }
+
+  /* app/assets/stylesheets/application.css */
+.dashboard-container {
+  padding: 20px;
+}
+
+.banner-placeholder {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-group {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-header {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+/* .btn-lg {
+  width: 100%;
+} */
+
+button {
+  display: inline-block;
+  width: auto;
+}

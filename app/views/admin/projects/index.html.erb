@@ -1,0 +1,30 @@
+<h1>Manage Projects</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Users</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.description %></td>
+        <td>
+          <ul>
+            <% project.users.each do |user| %>
+              <li><%= user.name %></li>
+            <% end %>
+          </ul>
+        </td>
+        <td>
+        <%= link_to "Edit", edit_admin_project_path(project), class: "btn btn-warning btn-sm" %>
+        <%= button_to "Delete", admin_project_path(project), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm", form_class: "d-inline" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

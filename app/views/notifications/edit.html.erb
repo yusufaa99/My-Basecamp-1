@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <h1>Edit Notification</h1>
+  <%= form_with model: @notification, local: true do |form| %>
+    
+    <!-- Notification Title -->
+    <div class="mb-3">
+      <%= form.label :title, 'Notification Title', class: 'form-label' %>
+      <%= form.text_field :title, class: 'form-control', placeholder: 'Enter title', required: true %>
+    </div>
+
+    <!-- Notification Body -->
+    <div class="mb-3">
+      <%= form.label :message, 'Notification Body', class: 'form-label' %> <!-- Using 'message' as per the model -->
+      <%= form.text_area :message, class: 'form-control', placeholder: 'Enter notification body', required: true %>
+    </div>
+
+    <!-- User Assignment (Optional) -->
+    <div class="mb-3">
+      <%= form.label :user_id, 'Assign to User (Optional)', class: 'form-label' %>
+      <%= form.collection_select :user_id, User.all, :id, :email, { prompt: 'Select a User' }, class: 'form-control' %>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <%= form.submit "Update Notification", class: 'btn btn-primary btn-lg' %>
+    </div>
+
+  <% end %>
+</div>

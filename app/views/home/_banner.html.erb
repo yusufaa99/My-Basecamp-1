@@ -1,0 +1,16 @@
+<div class="jumbotron text-center">
+<h1 class="display-8">Welcome to My Basecamp 1!</h1>
+  <%= image_tag 'https://png.pngtree.com/png-vector/20221118/ourmid/pngtree-network-vector-icon-people-connection-vector-illustration-flat-web-chat-vector-png-image_41035566.jpg', alt: 'My Company Logo', class: 'logo' %>
+  <h1 class="display-1 fw-bolder">Let's Collaborate ...</h1>
+  <p class="lead">Your one-stop solution for all your needs.</p>
+  <hr class="my-4">
+  <p>Join us today and start your journey!</p>
+
+  <% if user_signed_in? %>
+  
+  <% else %>
+    <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-primary btn-lg', role: 'button' %>
+    <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-secondary btn-lg', role: 'button' %>
+  <% end %>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="container-fluid">
+<h1 class="text-center">Admin Dashboard</h1>
+
+<div class="admin-dashboard">
+  <p>Welcome, <%= current_user.name %>!</p>
+  <ul>
+    <li><%= link_to 'Manage Users', admin_users_path %></li>
+    <li><%= link_to 'Manage Projects', admin_projects_path %></li>
+    <li><%= link_to 'Create Notification', new_notification_path%></li>
+
+  </ul>
+</div>
+
+
+</div>

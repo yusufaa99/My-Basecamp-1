@@ -1,0 +1,42 @@
+<!-- app/views/dashboards/user.html.erb -->
+<div class="dashboard-container-fluid">
+  <div class="banner-placeholder">
+    <!-- You can replace this with an actual image later -->
+    <%= image_tag 'https://via.placeholder.com/1200x400', alt: 'Banner Image', class: 'banner-img' %>
+  </div>
+
+  <div class="content d-flex justify-content-center  ">
+  <div class="card-group">
+    <div class="card mx-3">
+      <div class="card-header text-center">
+        <h3>Your Projects</h3>
+      </div>
+      <div class="card-body text-center">
+        <p>Manage your ongoing projects and see the progress.</p>
+        <%= link_to 'View Projects', projects_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
+    
+    <div class="card mx-3">
+      <div class="card-header text-center">
+        <h3>Your Profile</h3>
+      </div>
+      <div class="card-body text-center">
+        <p>View and edit your profile details.</p>
+        <%= link_to 'Edit Profile', edit_user_registration_path, class: 'btn btn-secondary' %>
+      </div>
+    </div>
+
+    <div class="card mx-3">
+      <div class="card-header text-center">
+        <h3>Notifications</h3>
+      </div>
+      <div class="card-body text-center">
+        <p>Stay updated with the latest news and alerts.</p>
+        <%= link_to 'View Notifications', notifications_path, class: 'btn btn-info' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
